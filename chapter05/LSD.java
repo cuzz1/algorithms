@@ -1,4 +1,11 @@
 public class LSD{
+
+    public static void main(String[] args) {
+        String[] a = {"sdfss", "edfsa", "adfaa", "sdfaa"};
+        sort(a, 5);
+    }
+
+
     public static void sort(String[] a, int W) {
         // 通过前W个字符将a[]排序
         int N = a.length;
@@ -10,7 +17,7 @@ public class LSD{
             int[] count = new int[R+1];
             // 计算出现的频率
             for (int i = 0; i < N; i++) {
-                count[a[i].chatAt(d) + 1]++;
+                count[a[i].charAt(d) + 1]++;
             }
             // 将频率转化为索引
             for (int r = 0; r < R; r++) {
@@ -25,6 +32,10 @@ public class LSD{
             for (int i = 0; i < N; i++) {
                 a[i] = aux[i];
             }
+        }
+
+        for (String str : a) {
+            System.out.println(str);
         }
     }
 }
